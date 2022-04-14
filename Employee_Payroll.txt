@@ -48,12 +48,3 @@ mysql>  insert into employee_payroll_service(Name, Salary,Start) values ('Neha',
 Query OK, 3 rows affected (0.03 sec)
 Records: 3  Duplicates: 0  Warnings: 0
 
-mysql> select * from employee_payroll_service;
-+----+---------+----------+------------+
-| ID | Name    | Salary   | Start      |
-+----+---------+----------+------------+
-|  1 | Neha    |  5000000 | 2004-09-04 |
-|  2 | Nilofar | 20000000 | 2012-02-11 |
-|  3 | Manali  | 42500000 | 2018-07-11 |
-+----+---------+----------+------------+
-3 rows in set (0.01 sec)
