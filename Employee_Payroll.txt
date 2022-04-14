@@ -100,3 +100,53 @@ mysql> select * from employee_payroll_service;
 |  3 | Manali  | F      | 42500000 | 2018-07-11 |
 +----+---------+--------+----------+------------+
 3 rows in set (0.01 sec)
+
+
+mysql> select AVG(salary) from employee_payroll_service where gender = 'f' group by gender;
++-------------+
+| AVG(salary) |
++-------------+
+|    22500000 |
++-------------+
+1 row in set (0.01 sec)
+
+mysql> select gender,AVG(salary) from employee_payroll_service group by gender;
++--------+-------------+
+| gender | AVG(salary) |
++--------+-------------+
+| F      |    22500000 |
++--------+-------------+
+1 row in set (0.01 sec)
+
+mysql> select AVG(salary) from employee_payroll_service;
++-------------+
+| AVG(salary) |
++-------------+
+|    22500000 |
++-------------+
+1 row in set (0.01 sec)
+
+mysql> select gender,SUM(salary) from employee_payroll_service group by gender;
++--------+-------------+
+| gender | SUM(salary) |
++--------+-------------+
+| F      |    67500000 |
++--------+-------------+
+1 row in set (0.01 sec)
+
+mysql> select gender,MIN(salary) from employee_payroll_service group by gender;
++--------+-------------+
+| gender | MIN(salary) |
++--------+-------------+
+| F      |     5000000 |
++--------+-------------+
+1 row in set (0.01 sec)
+
+mysql> select gender,MAX(salary) from employee_payroll_service group by gender;
++--------+-------------+
+| gender | MAX(salary) |
++--------+-------------+
+| F      |    42500000 |
++--------+-------------+
+1 row in set (0.00 sec)
+
