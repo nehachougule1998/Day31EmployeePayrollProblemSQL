@@ -43,3 +43,17 @@ mysql>  desc employee_payroll_service;
 | Start  | date        | NO   |     | NULL    |                |
 +--------+-------------+------+-----+---------+----------------+
 4 rows in set (0.02 sec)
+
+mysql>  insert into employee_payroll_service(Name, Salary,Start) values ('Neha', 5000000.00, '2004-09-04'), ('Nilofar', 20000000.00, '2012-02-11'),('Manali', 42500000.00, '2018-07-11');
+Query OK, 3 rows affected (0.03 sec)
+Records: 3  Duplicates: 0  Warnings: 0
+
+mysql> select * from employee_payroll_service;
++----+---------+----------+------------+
+| ID | Name    | Salary   | Start      |
++----+---------+----------+------------+
+|  1 | Neha    |  5000000 | 2004-09-04 |
+|  2 | Nilofar | 20000000 | 2012-02-11 |
+|  3 | Manali  | 42500000 | 2018-07-11 |
++----+---------+----------+------------+
+3 rows in set (0.01 sec)
